@@ -1,5 +1,6 @@
 import Interfaces.CustomExceptions.EmptyQueueException;
 import Interfaces.CustomExceptions.EmptyStackException;
+import Interfaces.DynamicArray;
 import Interfaces.Impl.QueueImpl;
 import Interfaces.Impl.StackImpl;
 
@@ -23,8 +24,8 @@ public class Main {
             }
         }
 
-
-        for (int i=0; i<=stack.getStackSize(); i++ ){
+        int size = stack.getStackSize() ;
+        for (int i=0; i<=size; i++ ){
             try{
                 System.out.println( "Pop last: " + stack.pop() );
             }
@@ -41,17 +42,18 @@ public class Main {
         queue.add(1580);
         System.out.println(queue);
 
+
         for (int i=0; i<=queue.getQueueSize(); i++ ){
             try{
-                System.out.println("Peek first in value: " + queue.peek());
+                System.out.println("Peek first: " + queue.peek());
             }
             catch (EmptyQueueException exception){
                 System.out.println(exception.getMessage());
             }
         }
 
-
-        for (int i=0; i<=queue.getQueueSize(); i++ ){
+        int queueSize = queue.getQueueSize() ;
+        for (int i=0; i<=queueSize; i++ ){
             try{
                 System.out.println("Pop first: " + queue.pop());
             }
@@ -60,7 +62,6 @@ public class Main {
             }
 
         }
-
 
     }
 }

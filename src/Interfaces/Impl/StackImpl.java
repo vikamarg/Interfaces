@@ -37,7 +37,7 @@ public class StackImpl implements Stack {
         {
             throw new EmptyStackException("Stack is empty. Pop is forbidden.\n");
         }
-        return dynamicArray.removeIndex(dynamicArray.getCurrentSize()-1);
+        return dynamicArray.removeIndex(dynamicArray.getCurrentSize()-1) ;
     }
 
     @Override
