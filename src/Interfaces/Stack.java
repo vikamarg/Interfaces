@@ -1,7 +1,9 @@
 package Interfaces;
 
+import Interfaces.CustomExceptions.EmptyStackException;
+
 public interface Stack {
-    int peek ();
-    int pop ();
+    public int peek() throws EmptyStackException;
+    public int pop() throws EmptyStackException;
     void push(int item);
 }

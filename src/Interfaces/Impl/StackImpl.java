@@ -20,7 +20,7 @@ public class StackImpl implements Stack {
     }
 
     @Override
-    public int peek() {
+    public int peek() throws EmptyStackException  {
 
         this.peekCount++;
         int lastIndex = dynamicArray.getCurrentSize()- this.peekCount;
@@ -32,7 +32,7 @@ public class StackImpl implements Stack {
     }
 
     @Override
-    public int pop() {
+    public int pop() throws EmptyStackException{
         if(dynamicArray.getCurrentSize() ==0 )
         {
             throw new EmptyStackException("Stack is empty. Pop is forbidden.\n");
